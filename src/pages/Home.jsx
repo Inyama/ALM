@@ -1,6 +1,7 @@
 import React from 'react';
+import Carousel from '../components/Carousel';
+import ActionCards from '../components/ActionCards';
 import { TrendingUp, Database, FileInput, FileText, BarChart3, Play, ChevronRight, Calendar, Download } from 'lucide-react';
-import ModalCard from '../components/ModalCard';
 import InfoCard from '../components/InfoCard';
 import GradientButton from '../components/GradientButton';
 
@@ -8,43 +9,23 @@ const Home = ({ darkMode }) => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       
-      {/* Hero Section - Top 4 Modal Cards */}
+      {/* Carousel Section - Replaces 4 Cards */}
       <section className="mb-20">
-        <h2 className={`text-3xl font-bold mb-8 ${darkMode ? 'text-white' : ''}`} style={!darkMode ? { color: 'var(--text-accent)' } : {}}>
-          Asset Liability Management Solutions
+        <Carousel darkMode={darkMode} />
+      </section>
+
+      {/* 6 Action Cards Section */}
+      <section className="mb-20">
+        <h2 className={`text-3xl font-bold mb-8 text-center ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+          Quick Actions
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-          <ModalCard
-            title="Bank"
-            badge="Banking"
-            description="Bank ALM tools help banks align their asset and liability strategies with regulatory constraints and customer needs. Track interest rate exposures, liquidity buffers and scenario outcomes in a single dashboard. Our banking module provides scenario-driven projections and easy export for compliance."
-            darkMode={darkMode}
-          />
-          <ModalCard
-            title="Pension"
-            badge="Pension"
-            description="Pension ALM focuses on long-term sustainability — blending contribution forecasts, demographic assumptions and investment strategies. Visualize funding ratios, stress-test plans across inflation and longevity scenarios, and generate board-ready reports."
-            darkMode={darkMode}
-          />
-          <ModalCard
-            title="Assurance"
-            badge="Insurance"
-            description="The Assurance module ties policy liabilities to market realities. Model claim patterns, reinsurance structures and capital buffers. Use stochastic simulations to quantify solvency and guide product pricing or reserve strategy."
-            darkMode={darkMode}
-          />
-          <ModalCard
-            title="Retirement Savings"
-            badge="Savings"
-            description="Retirement Savings planning gives individuals and plan administrators the tools to model savings trajectories. Combine employer contributions, benefit structures and projected market returns to produce personalized retirement outcomes."
-            darkMode={darkMode}
-          />
-        </div>
+        <ActionCards darkMode={darkMode} />
       </section>
 
       {/* WHY ALM Section */}
       <section className="mb-20">
         <h2 className={`text-3xl font-bold mb-4 ${darkMode ? 'text-white' : ''}`} style={!darkMode ? { color: 'var(--text-accent)' } : {}}>
-          WHY ALM (Asset Liability Model)
+          Why Asset Liability Management
         </h2>
         <p className={`mb-8 max-w-4xl leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
           Asset Liability Management is essential for organizations managing long-term financial obligations. 
@@ -275,10 +256,10 @@ const Home = ({ darkMode }) => {
             darkMode={darkMode}
           />
         </div>
-      </section>
-
-    </div>
-  );
+</section>
+</div>
+);
 };
+
 
 export default Home;
