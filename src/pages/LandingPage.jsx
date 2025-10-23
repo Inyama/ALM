@@ -75,7 +75,7 @@ const LandingPage = () => {
       <header className={`sticky top-0 z-50 transition-all duration-300 ${
         darkMode ? 'bg-gray-800/95' : 'bg-white/95'
       } backdrop-blur-sm shadow-lg`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-7x2 mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center gap-3">
@@ -207,7 +207,7 @@ const LandingPage = () => {
       <footer className={`mt-20 py-8 ${
         darkMode ? 'bg-gray-800 border-t border-gray-700' : 'bg-white border-t border-gray-200'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7x2 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">

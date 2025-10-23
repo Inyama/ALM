@@ -37,10 +37,10 @@ const Home = ({ darkMode }) => {
             darkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-100'
           }`}>
             <h3 className={`text-xl font-bold mb-4 ${darkMode ? 'text-white' : ''}`} style={!darkMode ? { color: 'var(--text-accent)' } : {}}>
-              HOW ALM works
+              How it works
             </h3>
             <p className={`text-sm leading-relaxed mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-              ALM works by linking asset cash flows to liability obligations under multiple scenarios. 
+              Asset Liability Management works by linking asset cash flows to liability obligations under multiple scenarios. 
               It projects future balance sheet dynamics, identifies mismatches, and recommends rebalancing strategies. 
               Core steps: data ingestion → assumption setting → cashflow generation → scenario simulation → optimization & reporting.
             </p>
